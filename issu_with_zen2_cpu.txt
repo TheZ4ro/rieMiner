@@ -1,0 +1,16 @@
+in some machine, the miner hung up while init. the log show:
+
+Host: mining.xpoolx.com -> 158.69.25.32
+Success!
+Subscriptions:
+ 0 - mining.set_difficulty: 00000000000000006f61000000000000
+ 1 - mining.notify: 00000000000000006f61000000000000
+ExtraNonce1    = 68004f8c
+extraNonce2Len = 4
+Accepted constellation pattern(s):
+ 0 - 0, 2, 4, 2, 4, 6, 2
+ 1 - 0, 2, 6, 4, 2, 4, 2
+ 
+ and stop here.
+ when use htop, you can see one thread work on 100%, and no further info.
+ I guess there are some bug in the init process, and when it got active, the thread hung up.
